@@ -22,7 +22,7 @@ At a high level the game works in the following way:
 
 # Flow Chart 1 
 
-! [Image Text](Flowchart1.png)
+![Image Text](Flowchart1.png)
 
 # Methods
 
@@ -30,7 +30,7 @@ The process for generating a random word and handling the player's guess is a li
 
 # GetRandomWord()
 
-! [Image Text](Flowchart2.png)
+![Image Text](Flowchart2.png)
 
 Randomly generates a random word to be guessed.
 
@@ -41,7 +41,7 @@ Randomly generates a random word to be guessed.
 
 # string GetGuess(string correctWord)
 
-! [Image Text](Flowchart3.png)
+![Image Text](Flowchart3.png)
 
 Asks the user to make a guess and validates the input before returning the guess.
 
@@ -52,7 +52,7 @@ Asks the user to make a guess and validates the input before returning the guess
 
 # void DisplayInfo(string guess, string correct)
 
-! [Image Text](Flowchart4.png)
+![Image Text](Flowchart4.png)
 
 Given a guess and the correct word to be guessed, displays the guess to the screen coloring each character based on its position and if it is in the correct word.
 
@@ -63,7 +63,7 @@ Given a guess and the correct word to be guessed, displays the guess to the scre
 
 # void DisplayCharInfo(char guess, int pos, string correct)
 
-! [Image Text](Flowchart5.png)
+![Image Text](Flowchart5.png)
 
 Given a guessed character, the position of that guess, and the correct word, select the correct color for the guess and write it to the console.
 
