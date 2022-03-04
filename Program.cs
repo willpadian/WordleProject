@@ -6,12 +6,35 @@ namespace WordleProject
     {
         static void Main(string[] args)
         {
+            if (args.Length > 0 && args[0] == "test")
+            {
+                TestAll();
+                return;
+            }
 
         }
+        public static void TestAll()
+        {
+            bool testDisplayInfo = TestDisplayInfo.RunTest();
+            Console.WriteLine($"Test LoadFile(filename): {testDisplayInfo}");
+
+            bool testDisplayCharInfo = TestDisplayCharInfo.RunTest();
+            Console.WriteLine($"Test LoadFile(filename): {testDisplayCharInfo}");
+
+            bool testGetGuess = TestGetGuess.RunTest();
+            Console.WriteLine($"Test LoadFile(filename): {testGetGuess}");
+
+            bool testGetRandomWord = TestGetRandomWord.RunTest();
+            Console.WriteLine($"Test LoadFile(filename): {testGetRandomWord}");
+
+
+
+            
+        }
         /// <summary>
-        /// 
+        /// It will generate a random word then returns it.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>a random word</returns>
         public static string GetRandomWord()
         {
             // 1. Load a filed called `words.txt`
@@ -23,11 +46,11 @@ namespace WordleProject
         }
 
         /// <summary>
-        /// 
+        /// Given a guess checks the guess whether or not the guess has the right number of letters for the word
         /// </summary>
         /// <param name="correctWord"></param>
-        /// <returns></returns>
-        string GetGuess(string correctWord)
+        /// <returns>either error if the word isn't the right size or feedback on the guess</returns>
+        public static string GetGuess(string correctWord)
         {
             // 1. Prompt the user to make a guess
             // 2. Read input from the keyboard and store the results in a variable named guess
@@ -36,12 +59,12 @@ namespace WordleProject
             return null;
         }
         /// <summary>
-        /// 
+        /// Check if the guess is the right length and if not throw an exception and if they do use the next variable to determine the validity of the guess.
         /// </summary>
         /// <param name="guess"></param>
         /// <param name="correct"></param>
 
-        void DisplayInfo(string guess, string correct)
+        public static void DisplayInfo(string guess, string correct)
         {
             // 1. Validate that the guess and correct word are the same length
             // 2. If the lengths do not match, throw an exception
@@ -49,12 +72,12 @@ namespace WordleProject
             // Use the DisplayCharInfo method to determine what color to print the character
         }
         /// <summary>
-        /// 
+        /// Use green when the letter is correct and in the right position from the input, use yellow if the letter is in the word but in the wrong position, and use red if it is not in the word at all.
         /// </summary>
         /// <param name="guess"></param>
         /// <param name="pos"></param>
         /// <param name="correct"></param>
-        void DisplayCharInfo(char guess, int pos, string correct)
+        public static void DisplayCharInfo(char guess, int pos, string correct)
         {
             // 1. If the guess is in the correct position, select the color green.
             // 2. If the guess is in the correct word but not correct position, select yellow.
