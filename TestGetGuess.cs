@@ -10,7 +10,7 @@ namespace WordleProject
             Console.WriteLine("Guess the word trash.");
             string result = Program.GetGuess("drags");
             string expected = "trash";
-            if (result != "trash")
+            if (result != expected)
             {
                 Console.Error.WriteLine($"The result should have been 'trash' but was {result}");
                 return false;
