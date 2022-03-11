@@ -15,6 +15,7 @@ namespace WordleProject
             try
             {
                 Program.DisplayInfo("chocolate", "drive");
+                Console.Error.WriteLine("Expected an exception but there was none.");
                 return false;
             }
             catch { }
